@@ -6,66 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".SnapActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/logged_out_group"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <Button
+        android:id="@+id/snapitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:drawableStart="@android:drawable/ic_menu_camera"
+        android:onClick="takePicture"
+        android:text="@string/snap_button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Please go back and log in to use this feature."
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/logged_in_group"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <ImageView
+        android:id="@+id/preview"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/preview_description"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/snapButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:drawableStart="@android:drawable/ic_menu_camera"
-            android:onClick="takePicture"
-            android:text="Snap it!"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/preview"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:adjustViewBounds="true"
-            android:contentDescription="Preview of the picture you just took."
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/snapButton" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:progress="0"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="@id/preview"
-            app:layout_constraintStart_toStartOf="@id/preview"
-            app:layout_constraintTop_toBottomOf="@id/preview" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@id/snapitButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

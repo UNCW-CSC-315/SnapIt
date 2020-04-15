@@ -34,21 +34,23 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:onClick="signOut"
-            android:text="Logout"
+            android:text="@string/logout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hello" />
 
         <Button
-            android:id="@+id/snapitButton"
+            android:id="@+id/uploadItButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="launchUploadItActivity"
+            android:text="@string/upload_button"
             android:layout_marginTop="24dp"
-            android:onClick="launchSnapitActivity"
-            android:text="Snap it!"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logout"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/logout" />
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -61,42 +63,60 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/login_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/login_prompt"
+            android:textSize="18sp"
+            />
+
+        <TextView
             android:id="@+id/email_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
+            android:text="@string/email"
             app:layout_constraintBottom_toBottomOf="@id/email"
             app:layout_constraintEnd_toStartOf="@id/email"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/email" />
+            app:layout_constraintTop_toTopOf="@id/email"
+            android:labelFor="@id/email"
+            />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:autofillHints="@string/email_hint"
             android:inputType="textEmailAddress"
             app:layout_constraintBottom_toTopOf="@id/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/email_label"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_prompt"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
             android:id="@+id/password_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password"
+            android:text="@string/password"
             app:layout_constraintBottom_toBottomOf="@id/password"
             app:layout_constraintEnd_toStartOf="@id/password"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/password" />
+            app:layout_constraintTop_toTopOf="@id/password"
+            android:labelFor="@id/password"/>
 
         <EditText
             android:id="@+id/password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:autofillHints="@string/password_hint"
             android:inputType="textPassword"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -109,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="signIn"
-            android:text="Login"
+            android:text="@string/login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password" />
@@ -119,13 +139,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="createAccount"
-            android:text="Create New Account"
+            android:text="@string/create_new_account"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/login_button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <Button
+        android:id="@+id/snapitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="launchSnapItActivity"
+        android:text="@string/snap_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/pickitButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="36dp"
+        />
+
+    <Button
+        android:id="@+id/pickitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="launchPickItActivity"
+        android:text="@string/pick_button"
+        app:layout_constraintStart_toEndOf="@id/snapitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/snapitButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

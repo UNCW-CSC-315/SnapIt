@@ -147,8 +147,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void launchSnapitActivity(View view) {
+    public void launchSnapItActivity(View view) {
         startActivity(new Intent(this, SnapActivity.class));
+    }
+    public void launchPickItActivity(View view) {
+        startActivity(new Intent(this, PickItActivity.class));
+    }
+    public void launchUploadItActivity(View view) {
+        startActivity(new Intent(this, UploadActivity.class));
     }
 
 }

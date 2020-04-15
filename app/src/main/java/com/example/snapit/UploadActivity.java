@@ -55,7 +55,7 @@ public class UploadActivity extends AppCompatActivity {
 
         mLoggedInGroup = findViewById(R.id.logged_in_group);
         mLoggedOutGroup = findViewById(R.id.logged_out_group);
-        mProgressBar = findViewById(R.id.progressBar);
+//        mProgressBar = findViewById(R.id.progressBar);
         mImageView = findViewById(R.id.preview);
 //
 //        if (savedInstanceState != null) {

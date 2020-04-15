@@ -1,4 +1,28 @@
 <resources>
     <string name="app_name">Snapit</string>
+    <string name="please_login">Please go back and log in to use this feature.</string>
+
+    <!-- MainActivity -->
+    <string name="login_prompt">You must login to use the Upload functionality.</string>
     <string name="hello">Welcome %1$s!</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="email">Email</string>
+    <string name="email_hint">email address</string>
+    <string name="password">Password</string>
+    <string name="password_hint">enter password</string>
+    <string name="create_new_account">Create New Account</string>
+
+    <string name="snap_button">Snap It!</string>
+    <string name="pick_button">Pick It!</string>
+    <string name="upload_button">Upload It!</string>
+
+    <string name="preview_description">Preview of the picture you just took.</string>
+
+    <string name="write_permission_needed">Permission needed to save picture</string>
+    <string name="write_permission_description">The app needs your permission to save the picture that it took to your device\'s storage in order for it to show up in the picture gallery.</string>
+    <string name="close">Close</string>
+
+
+
 </resources>
