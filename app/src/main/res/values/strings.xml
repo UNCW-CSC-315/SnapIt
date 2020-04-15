@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Snapit</string>
+    <string name="hello">Welcome %1$s!</string>
+</resources>
